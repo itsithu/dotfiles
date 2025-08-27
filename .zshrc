@@ -53,8 +53,8 @@ precmd_functions+=prompt
 # added by di installer
 export PATH="$HOME/.local/bin:$PATH"
 
-alias d="di dev"
-alias b="di build"
+alias d="dt dev"
+alias b="dt build"
 alias fmt="df"
 alias lint="dl"
 alias lintf="dl --fix"

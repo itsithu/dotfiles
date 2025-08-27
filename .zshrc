@@ -18,9 +18,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # -------------------------------- #
 # ZSH Prompt with Git Branch
 # -------------------------------- #
-# -------------------------------- #
-# ZSH Prompt with Git Branch
-# -------------------------------- #
 function parse_git_branch() {
   git rev-parse --abbrev-ref HEAD 2> /dev/null
 }

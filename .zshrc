@@ -3,16 +3,23 @@
 
 # Some parts adapted from https://github.com/antfu/dotfiles
 
+# -------------------------------- #
+# Install these:
+# -------------------------------- #
+# brew install zoxide
+# brew install zsh-syntax-highlighting
+# brew install zsh-autosuggestions
+# pnpm i -g @antfu/ni
+# brew install hub
+# brew install diff-so-fancy
+
 # Zoxide
-# `brew install zoxide`
 eval "$(zoxide init --cmd cd zsh)"
 
 # zsh-syntax-highlighting
-# `brew install zsh-syntax-highlighting``
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zsh-autosuggestions
-# `brew install zsh-autosuggestions`
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # -------------------------------- #
@@ -42,19 +49,28 @@ function prompt() {
 precmd_functions+=prompt
 
 # -------------------------------- #
-# Deno Package Manager
+# Node Package Manager
 # -------------------------------- #
-# https://github.com/itsithu/di
-# `curl -fsSL https://raw.githubusercontent.com/itsithu/di/main/install.sh | sh`
+# https://github.com/antfu/ni
 
-# added by di installer
-export PATH="$HOME/.local/bin:$PATH"
+alias nio="ni --prefer-offline"
+alias s="nr start"
+alias d="nr dev"
+alias b="nr build"
+alias bw="nr build --watch"
+alias t="nr test"
+alias tu="nr test -u"
+alias tw="nr test --watch"
+alias w="nr watch"
+alias p="nr play"
+alias c="nr typecheck"
+alias fmt="nr format"
+alias fmtf="nr format --write"
+alias lint="nr lint"
+alias lintf="nr lint --fix"
+alias release="nr release"
+alias re="nr release"
 
-alias d="dt dev"
-alias b="dt build"
-alias fmt="df"
-alias lint="dl"
-alias lintf="dl --fix"
 
 # -------------------------------- #
 # Git
@@ -196,3 +212,11 @@ function serve() {
     live-server $1
   fi
 }
+
+# pnpm
+export PNPM_HOME="/Users/sithu/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -1,6 +1,3 @@
-# -------------------------------- #
-# Install these:
-# -------------------------------- #
 # brew install zoxide zsh-syntax-highlighting zsh-autosuggestions
 
 # Zoxide
@@ -63,5 +60,6 @@ alias lint="dt lint"
 alias gs="git status"
 alias ga="git add"
 alias gA="git add -A"
-alias gcam="git add -A && git commit -m"
+alias gcam="git commit -m"
 alias gp="git push"
+alias grhh="git reset --hard"

@@ -57,7 +57,7 @@ alias lint="pr lint"
 alias gs="git status"
 alias ga="git add"
 alias gA="git add -A"
-alias gcam="git commit -m"
+alias gcam="gA && git commit -m"
 alias gp="git push"
 alias grhh="git reset --hard"
 
@@ -65,7 +65,7 @@ alias grhh="git reset --hard"
 # pnpm
 # -------------------------------- #
 
-export PNPM_HOME="~/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

@@ -3,7 +3,7 @@
 
 local apps = {
   ["2"] = "Safari",
-  ["3"] = "Visual Studio Code",
+  ["3"] = "Zed",
   ["4"] = "Terminal"
 }
 

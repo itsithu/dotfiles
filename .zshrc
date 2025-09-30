@@ -40,15 +40,17 @@ precmd_functions+=prompt
 # Aliases
 # -------------------------------- #
 
-alias pr="pnpm run"
-alias pi="pnpm install"
-alias pun="pnpm uninstall"
-alias plx="pnpm dlx"
+alias dr="deno run"
+alias dt="deno task"
+alias da="deno add"
+alias drm="deno remove"
+alias di="deno install"
+alias dun="deno uninstall"
 
-alias d="pr dev"
-alias b="pr build"
-alias format="pr format"
-alias lint="pr lint"
+alias d="dt dev"
+alias b="dt build"
+alias fmt="deno fmt"
+alias lint="deno lint"
 
 # -------------------------------- #
 # Git
@@ -60,13 +62,3 @@ alias gA="git add -A"
 alias gcam="gA && git commit -m"
 alias gp="git push"
 alias grhh="git reset --hard"
-
-# -------------------------------- #
-# pnpm
-# -------------------------------- #
-
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac

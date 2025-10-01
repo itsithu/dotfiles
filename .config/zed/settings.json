@@ -9,10 +9,13 @@
     "light": "Ayu Light",
     "dark": "Ayu Dark"
   },
-  "ui_font_family": "JetBrains Mono",
-  "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 15,
   "buffer_font_size": 13,
   "formatter": "prettier",
-  "format_on_save": "prettier"
+  "format_on_save": "prettier",
+  "languages": {
+    "CSS": {
+      "language_servers": ["tailwindcss-language-server"]
+    }
+  }
 }
